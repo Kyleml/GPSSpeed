@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 监听 GPS 卫星状态，获取卫星数量
         gpsStatusListener = event -> {
-            GpsStatus status = event.getGPSStatus();
+            GpsStatus status = event.getGPSStatus(null);
             if (status != null) {
                 int count = 0;
                 for (GpsSatellite sat : status.getSatellites()) {
